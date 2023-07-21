@@ -28,8 +28,8 @@ export const getData = (payload) => (dispatch) => {
     });
 };
 
-const USER = `http://localhost:8080/users`;
-
+const USER = `https://userandtrainer-u0yp.onrender.com/users`;
+// https://userandtrainer-u0yp.onrender.com/users
 export const getUsers = (payload) => (dispatch) => {
   dispatch({ type: PRODUCT_REQUEST });
   console.log(payload);
@@ -49,7 +49,7 @@ export const getUsers = (payload) => (dispatch) => {
 
 export const deleteProduct = (id) => (dispatch) => {
   return axios
-    .delete(`http://localhost:8080/users/${id}`)
+    .delete(`https://userandtrainer-u0yp.onrender.com/users/${id}`)
     .then((res) => {
       console.log(res.data);
       dispatch({ tpye: DELETE_PRODUCT_SUCCESS });

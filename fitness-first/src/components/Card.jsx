@@ -5,18 +5,18 @@ import styled from "styled-components";
 const Card = ({ image, exercise, category, instructions, price, id }) => {
   return (
     <div className="relative flex mt-[5%]  flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-      <div class="relative mx-4  h-56 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
+      <div class="relative mx-4  h-56 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border ">
         <img src={image} alt="img-blur-shadow" layout="fill" />
       </div>
       <div class="p-6">
         {" "}
-        <h1 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+        <h1 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased" style={{textTransform:"uppercase"}}>
           {exercise}
         </h1>
-        <h3 className="mb-2 block font-sans text-md font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+        <h3 className="mb-2 block font-sans text-md font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased" style={{textTransform:"uppercase"}}>
           Categoy: {category}{" "}
         </h3>
-        <h3 className="mb-2 block font-sans text-sm font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+        <h3 className="mb-2 block font-sans text-sm font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased" style={{textTransform:"uppercase"}}>
           {" "}
           Price: {price}
         </h3>

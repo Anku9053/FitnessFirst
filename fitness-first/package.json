@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.19",
+  
     "@chakra-ui/react": "^2.6.0",
     "@emotion/react": "^11.10.8",
     "@emotion/styled": "^11.10.8",
@@ -28,6 +28,7 @@
     "styled-components": "^5.3.10",
     "tailwindcss": "^3.3.2",
     "thunk": "^0.0.1",
+    "@chakra-ui/icons": "^2.0.17",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

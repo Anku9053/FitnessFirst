@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-      <div className='mt-[4%]'>
+      <div className='mt-[0.5%]'>
       <MainRoutes/>
       </div>
       <Footer/>

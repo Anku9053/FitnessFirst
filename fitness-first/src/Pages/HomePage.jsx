@@ -76,9 +76,9 @@ const HomePage = () => {
           {/* hero buttons */}
 
           <div className="hero-buttons">
-            <buttons className="btn">Get Started</buttons>
+            <button className="btn">Get Started</button>
 
-            <buttons className="btn">Learn More</buttons>
+            <button className="btn">Learn More</button>
           </div>
         </div>
 
@@ -132,8 +132,8 @@ const HomePage = () => {
         </div>
 
         <div className="program-categories">
-          {programsData.map((el) => (
-            <div className="category">
+          {programsData.map((el,i) => (
+            <div key={i} className="category">
               {el.image}
               <span>{el.heading}</span>
               <span>{el.details}</span>

@@ -1,16 +1,33 @@
 import React, { useEffect, useRef } from "react";
 import Header from "./Header/Header";
+import "./Navbar.css"
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Logo from "../images/logo/Logo.png";
-import { HamburgerIcon, SearchIcon, CloseIcon } from "@chakra-ui/icons";
+// import {SearchIcon} from "@chakra-ui/icons";
 import { useLocation, useSearchParams } from "react-router-dom";
-
+import {BsSearch} from "react-icons/bs"
 import { getData, getUsers } from "../Redux/DataReducer/action";
-
+import {Box} from '@chakra-ui/react'
+import {
+  // Box,
+  Flex,
+  HStack,
+  IconButton,
+  Button,
+  useDisclosure,
+  useColorModeValue,
+  Stack,
+  useColorMode,
+} from "@chakra-ui/react";
+import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
+ 
 const Navbar = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
+  // const { isOpen, onOpen, onClose } = useDisclosure();
   const [nav, setNav] = useState(false);
+  const [search1,setsearch1] = useState("");
   const isAuth = useSelector((state) => state.authReducer.isAuth);
   const name = useSelector((state) => state.authReducer.first_name);
   console.log(name);
@@ -20,11 +37,17 @@ const Navbar = () => {
   // const dispatch = useDispatch();
   const handleClick = () => {
     setNav((p) => !p);
-  };
+  }; 
   const dispatch = useDispatch();
   const [query, setQuery] = useState("");
   let id = useRef();
-
+  let count = 0;
+  const search = ()=>{
+    count++;
+    
+    console.log(query)
+    setQuery("")
+  }
   useEffect(() => {
     const paramObj = {
       q: query && query,
@@ -43,8 +66,11 @@ const Navbar = () => {
     }, 1000);
   }, [query]);
 
+  // const hello = ()=>{
+  //   console.log("working")
+  // }
   return (
-    <div className="w-screen h-[80px]  z-10 bg-orange-100 fixed opacity-23">
+    <div className="w-screen h-[80px]  z-10 ">
       <div className="px-2 flex justify-between item-center w-full h-full m-auto">
         <div className="flex items-center w-full mr-4">
           <h2 className="">
@@ -61,13 +87,22 @@ const Navbar = () => {
               onChange={(e) => {
                 setQuery(e.target.value);
               }}
-              className="rounded-md  w-full "
+              // className="rounded-md  
+              // w-full 
+              // "
             ></input>
-            <box className="bg-slate-100 rounded-md">
-              <SearchIcon className="text-3xl" />
-            </box>
+            <Box style={{background:"none"}} className="bg-slate-100 rounded-md">
+            <BsSearch onClick={search} className="bssearch" style={{background:"transparent",width:"40px",height:"30px"}}/>
+            </Box>
           </div>
           <ul className="hidden text-1.4xl md:flex">
+           
+            <Button
+              onClick={toggleColorMode}
+            >
+              {colorMode === "light" ?<SunIcon />: <MoonIcon />} 
+             </Button>
+            
             <li className=" font-semibold">
               <Link to="/products">Excercise</Link>
             </li>

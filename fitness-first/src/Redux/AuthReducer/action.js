@@ -6,7 +6,7 @@ import {
   REGISTER_SUCCESS,
 } from "./actionTypes";
 
-const USER = `http://localhost:8080/users`;
+const USER = `https://userandtrainer-u0yp.onrender.com/users`;
 export const userRegister = (payload) => (dispatch) => {
   // Complete login logic here
   dispatch({ type: REGISTER_SUCCESS });
@@ -15,11 +15,14 @@ export const userRegister = (payload) => (dispatch) => {
     .post(USER, payload)
     .then((res) => {
       console.log("postscc");
+      console.log(payload)
       dispatch({ type: LOGIN_SUCCESS, payload: payload });
     })
     .catch((err) => {
       dispatch({ type: LOGIN_FAILURE });
     });
+
+
 };
 
 export const login = (payload) => (dispatch) => {
@@ -28,6 +31,7 @@ export const login = (payload) => (dispatch) => {
   return axios
     .get(USER)
     .then((res) => {
+      console.log(payload)
       dispatch({ type: LOGIN_SUCCESS, payload: res.data });
     })
     .catch((err) => {

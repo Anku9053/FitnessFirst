@@ -39,7 +39,7 @@ const Login = () => {
     } else {
       const getuserData = () => {
         return axios
-          .get(`http://localhost:8080/users/${data.email}`)
+          .get(`https://userandtrainer-u0yp.onrender.com/users/${data.email}`)
           .then((res) => {
             if (res.data.email == data.email) {
               if (res.data.password == data.password) {

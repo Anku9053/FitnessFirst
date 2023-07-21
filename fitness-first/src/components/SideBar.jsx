@@ -51,7 +51,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="flex flex-col justify-start items-start pt-4 pl-2 bg-zinc-400 h-full rounded-3xl">
+    <div className="flex flex-col justify-start items-start pt-4 pl-2 bg-white h-full rounded-3xl">
       <h3>Filter By Category</h3>
       <div>
         <input

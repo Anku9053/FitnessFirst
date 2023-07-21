@@ -3,14 +3,14 @@ import "../index.css";
 function Contact() {
   return (
     <>
-      <section className="mt-[18%]">
-        <div className="login-banner relative justify-center flex">
+      <section className="mt-[4%]">
+        <div className="login-banner relative justify-center flex" style={{width:"100%"}}>
           <h1 className="text-white absolute bottom-[25px] text-[3rem] font-bold">
             Contact Us
           </h1>
         </div>
         {/* contact */}
-        <div className="bg-white py-[12rem] page-padding grid grid-cols-2 container gap-10 items-center md1000:grid-cols-1 ">
+        <div style={{width:"130%"}} className="bg-white py-[12rem] page-padding grid grid-cols-2 container gap-10 items-center md1000:grid-cols-1 ">
           {/* first col */}
           <div className="md1000:w-[60%] md1000:flex md1000:flex-col md1000:mx-auto min800:w-[90%] min620:w-full">
             <h2 className="text-black text-[36px] font-bold leading-[1.2]">
@@ -105,13 +105,13 @@ function Contact() {
         </div>
 
         {/* map */}
-        <iframe
+        <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1572675.7595829577!2d-105.02573624935042!3d39.65798807664909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c5fe2e6306ccd%3A0xa6b400a73beef706!2sDenver%20County%2C%20Denver%2C%20CO%2C%20USA!5e0!3m2!1sen!2srs!4v1673981026796!5m2!1sen!2srs"
           allowFullScreen=""
           loading="lazy"
           samesite="Strict"
           title="map"
-          style={{ width: "100%", height: "45rem", border: "0px" }}
+          style={{ width: "100%", height: "45rem", border: "0px",marginTop:"10px" }}
         ></iframe>
       </section>
     </>
