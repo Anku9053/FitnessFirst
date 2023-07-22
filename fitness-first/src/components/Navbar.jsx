@@ -22,6 +22,7 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
+import Toggling from "../Toggling";
  
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -87,9 +88,8 @@ const Navbar = () => {
               onChange={(e) => {
                 setQuery(e.target.value);
               }}
-              // className="rounded-md  
-              // w-full 
-              // "
+              className="rounded-md  
+              w-full"
             ></input>
             <Box style={{background:"none"}} className="bg-slate-100 rounded-md">
             <BsSearch onClick={search} className="bssearch" style={{background:"transparent",width:"40px",height:"30px"}}/>
@@ -97,11 +97,10 @@ const Navbar = () => {
           </div>
           <ul className="hidden text-1.4xl md:flex">
            
-            <Button
-              onClick={toggleColorMode}
-            >
-              {colorMode === "light" ?<SunIcon />: <MoonIcon />} 
-             </Button>
+           
+              {/* <Toggling/> */}
+             
+             
             
             <li className=" font-semibold">
               <Link to="/products">Excercise</Link>
@@ -123,12 +122,13 @@ const Navbar = () => {
         <div className="hidden md:flex pr-4">
           <Link to="/admin">
             {" "}
-            <button className="px-5 mr-2 h-10  my-5 text-center">Admin</button>
+            <button style={{textTransform:"uppercase",border:"none"}} className="px-5 mr-2 h-10  my-5 text-center">Admin</button>
           </Link>
           <Link to="/login">
             <button
+            style={{textTransform:"uppercase",border:"none"}}
               onClick={() => dispatch({ type: "TOGGLE" })}
-              className="px-5 h-10  my-5"
+              className="play px-5 h-10  my-5"
             >
               {isAuth ? "Logout" : "Login"}
             </button>

@@ -17,7 +17,7 @@ const Footer = () => {
               program designed to help you reach your fitness goals.
             </p>
             {/* socials */}
-            <div className="flex gap-7 text-[18px] text-[#646464] min540:justify-center">
+            {/* <div className="flex gap-7 text-[18px] text-[#646464] min540:justify-center">
               <i
                 style={{ transition: "all 0.3s" }}
                 className="fa-brands fa-facebook-f bg-[#efefef] p-4 rounded-full px-[14px] hover:bg-[#ff0366] hover:text-white"
@@ -34,7 +34,7 @@ const Footer = () => {
                 style={{ transition: "all 0.3s" }}
                 className="fa-brands fa-youtube bg-[#efefef] p-4 rounded-full hover:bg-[#ff0366] hover:text-white"
               ></i>
-            </div>
+            </div> */}
             <p className="text-[16px] font-medium text-[#646464]">
               Privacy Policy | © {new Date().getFullYear()} Gymate <br /> Design
               by{" "}

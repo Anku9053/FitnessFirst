@@ -1,0 +1,55 @@
+/* For screens up to 620px */
+@media (max-width: 620px) {
+    /* Center the hero and form elements vertically */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+    }
+  
+    .hero {
+      order: 2; /* Move the hero section below the form */
+    }
+  
+    form {
+      order: 1; /* Move the form above the hero section */
+    }
+  
+    /* Increase the font size of the header */
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+  
+  /* For screens up to 1000px */
+  @media screen and (max-width: 1000px) {
+    /* Adjust the layout for the first column */
+    .hero {
+      /* Specify the desired width and center the content */
+      width: 80%;
+      margin: 0 auto;
+    }
+  
+    /* Adjust the layout for the second column (form) */
+    form {
+      /* Specify the desired width and center the content */
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  
+  /* For screens up to 800px */
+  /* @media screen and (max-width: 800px) {
+  
+    .hero {
+    
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+    form {
+      
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+   */

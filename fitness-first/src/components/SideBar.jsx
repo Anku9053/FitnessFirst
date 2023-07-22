@@ -51,7 +51,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="flex flex-col justify-start items-start pt-4 pl-2 bg-white h-full rounded-3xl">
+    <div style={{marginTop:"1rem"}} className="flex flex-col justify-start items-start pt-4 pl-2 bg-white h-full rounded-3xl">
       <h3>Filter By Category</h3>
       <div>
         <input
@@ -95,7 +95,7 @@ const Sidebar = () => {
             value={"desc"}
             defaultChecked={order === "desc"}
           />
-          <label htmlFor="desc">descending</label>
+          <label htmlFor="desc">Descending</label>
         </div>
       </div>
       <div className="flex">

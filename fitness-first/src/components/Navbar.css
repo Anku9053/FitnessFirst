@@ -1,3 +1,16 @@
 .bssearch:hover{
     cursor: pointer;
 }
+
+.font-semibold{
+    color: white;
+    text-transform: uppercase;
+}
+
+.hidden{
+    text-transform: uppercase;
+}
+
+.play:hover{
+    border:1px solid white;
+}

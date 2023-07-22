@@ -10,13 +10,13 @@ const Card = ({ image, exercise, category, instructions, price, id }) => {
       </div>
       <div class="p-6">
         {" "}
-        <h1 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased" style={{textTransform:"uppercase"}}>
+        <h1 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased" style={{textTransform:"uppercase",color:"black"}}>
           {exercise}
         </h1>
-        <h3 className="mb-2 block font-sans text-md font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased" style={{textTransform:"uppercase"}}>
+        <h3 className="mb-2 block font-sans text-md font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased" style={{textTransform:"uppercase",color:"black"}}>
           Categoy: {category}{" "}
         </h3>
-        <h3 className="mb-2 block font-sans text-sm font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased" style={{textTransform:"uppercase"}}>
+        <h3 className="mb-2 block font-sans text-sm font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased" style={{textTransform:"uppercase",color:"black"}}>
           {" "}
           Price: {price}
         </h3>
