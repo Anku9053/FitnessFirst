@@ -1,0 +1,26 @@
+
+
+@media screen and (max-width:768px) {
+    .stroke-text{
+        font-size: 10px;
+        /* border: 2px solid red; */
+        text-align: left;
+        width: fit-content;
+        position: relative;
+        right: 60px;
+    }
+    
+}
+
+
+@media screen and (max-width:1000px) {
+    .stroke-text{
+        font-size: 15px;
+        /* border: 2px solid red; */
+        text-align: left;
+        width: fit-content;
+        position: relative;
+        right: 60px;
+    }
+    
+}

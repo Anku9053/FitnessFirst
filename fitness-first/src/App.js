@@ -16,6 +16,7 @@ import { useDarkMode } from "./useDarkMode";
 import Toggling from './Toggling';
 import DisplayTypeWriter from './Pages/DisplayTypeWriter';
 import { useLocation } from 'react-router-dom';
+// import GoogleAuthLogin from './Pages/GoogleAuthLogin';
 // import TOGGLEING from "./TOGGLEING";
 
 function App() {
@@ -36,6 +37,8 @@ function App() {
       <MainRoutes/>
       </div>
       <Footer/>
+
+      {/* <GoogleAuthLogin/> */}
     </div>
     
   );

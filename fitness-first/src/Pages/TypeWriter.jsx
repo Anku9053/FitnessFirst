@@ -1,27 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import '../CSS/Typewriter.css';
 
 const Typewriter = ({ text, delay }) => {
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
+  const textRef = useRef(text);
 
-  // Typing logic goes here
+  // Set the current text and update the ref when the 'text' prop changes
   useEffect(() => {
-    if (currentIndex < text.length) {
-      const timeout = setTimeout(() => {
-        setCurrentText(prevText => prevText + text[currentIndex]);
-        setCurrentIndex(prevIndex => prevIndex + 1);
-      }, delay);
-  
-      return () => clearTimeout(timeout);
-    }
-  }, [currentIndex, delay, text]);
-  return (
-    <div style={{textAlign:"center",position:"relative",left:"10%"}}>
+    textRef.current = text;
+    setCurrentText('');
+    setCurrentIndex(0);
+  }, [text]);
 
-    <span className='stroke-text' style={{fontSize:"40px",color:"white"}}>{currentText}</span>
-    {/* <span className='stroke-text' style={{fontSize:"40px",color:"white"}}>{currentText}</span>; */}
+  useEffect(() => {
+    const typingTimeout = setTimeout(() => {
+      if (currentIndex < textRef.current.length) {
+        setCurrentText(prevText => prevText + textRef.current[currentIndex]);
+        setCurrentIndex(prevIndex => prevIndex + 1);
+      }
+    }, delay);
+
+    return () => clearTimeout(typingTimeout);
+  }, [currentIndex, delay]);
+
+  return (
+    <div style={{ textAlign: 'center', position: 'relative', left: '10%' }}>
+      <span className='stroke-text' style={{ fontSize: '40px', color: 'white' }}>
+        {currentText}
+      </span>
     </div>
-  )
+  );
 };
 
 export default Typewriter;

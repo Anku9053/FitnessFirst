@@ -167,6 +167,27 @@ function Contact() {
               type="text"
             />
             {/* ... (rest of the code) ... */}
+            <input
+               className="w-full py-[12px] px-[20px] h-[51px] text-[14px] border border-solid border-[#e4e4e4] outline-none mb-8"
+               placeholder="Email Address *"
+               type="email"
+             ></input>
+             <select className="w-full py-[12px] px-[20px] h-[51px] text-[14px] border border-solid border-[#e4e4e4] outline-none mb-8">
+               <option>Select Class</option>
+               <option>Body Building</option>
+               <option>Boxing</option>
+               <option>Running</option>
+               <option>Fitness</option>
+               <option>Yoga</option>
+               <option>Workout</option>
+               <option>Katate</option>
+               <option>Meditation</option>
+               <option>Cycling</option>
+             </select>
+             <textarea
+               placeholder="Comment"
+               className="w-full py-[12px] px-[20px] h-[140px] text-[14px] border border-solid border-[#e4e4e4] outline-none mb-8"
+             ></textarea>
             <button
               type="submit"
               className="text-white bg-orange-600 w-fit py-[15px] px-[30px] font-bold text-[14px] uppercase self-center mt-6"
