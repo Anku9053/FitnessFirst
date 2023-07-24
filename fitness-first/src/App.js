@@ -14,19 +14,23 @@ import { lightTheme, darkTheme } from "./theme";
 import { GlobalStyles } from "./global";
 import { useDarkMode } from "./useDarkMode";
 import Toggling from './Toggling';
+import DisplayTypeWriter from './Pages/DisplayTypeWriter';
+import { useLocation } from 'react-router-dom';
 // import TOGGLEING from "./TOGGLEING";
 
 function App() {
   const [theme, toggleTheme] = useDarkMode("light");
+  const Location = useLocation();
+  console.log(Location.state)
   const adminAuth= useSelector(state=> state.authReducer.isAuthAdmin)
   return (
-  
+  // <DisplayTypeWriter/>
     <div className="App">
      
     <Navbar/>
   
 
-
+    <DisplayTypeWriter/>
       
       <div className='mt-[0.5%]'>
       <MainRoutes/>

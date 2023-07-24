@@ -39,14 +39,19 @@ function BmiCalc() {
               calculation tool.
             </p>
             <div className="flex flex-col">
+            
               <form className="flex w-full gap-6 h-[50px] mt-10 ">
+                
                 <input
+                style={{color:"white"}}
                   onChange={(e) => setWeight(e.target.value)}
                   className="w-[50%] bg-transparent text-[14px] border-2 border-[#ffffff7d] pl-6 min450:bg-white min450:text-black"
                   type="text"
+                  
                   value={weight}
                   placeholder="Weight / kg"
                   />
+                 
                 <input
                   onChange={(e) => setHeight(e.target.value)}
                   className="w-[50%] bg-transparent text-[14px] border-2 border-[#ffffff7d] pl-6 min450:bg-white min450:text-black-100"

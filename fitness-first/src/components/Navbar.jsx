@@ -143,13 +143,16 @@ const Navbar = () => {
         </div>
       </div>
 
+  
       <ul
+     
         className={
           !nav
             ? "hidden"
             : "absolute bg-zinc-200 w-full px-7 flex flex-col justify-between"
         }
       >
+
         <li className="border-b-2 border-gray-300 text-center w-full text-2xl">
           Home
         </li>
@@ -162,11 +165,13 @@ const Navbar = () => {
         <li className="border-b-2 bordergray-300 text-center w-full text-2xl">
           Cart
         </li>
-        <div className="flex flex-col my-4">
-          <button className="mx-7 h-10 text-center my-3">Sign Up</button>
-          <button className="mx-7 h-10 text-center">Login</button>
+        <li></li>
+        <div style={{justifyContent:"center",alignItems:"center"}} className="flex flex-col my-4">
+          <button style={{width:"140px",textAlign:"center",justifyContent:"center"}} className="mx-7 h-10 text-center my-3">Sign Up</button>
+          <button style={{width:"140px",textAlign:"center",justifyContent:"center"}} className="mx-7 h-10 text-center">Login</button>
         </div>
-        <li>
+        
+        {/* <li>
           <Link to="host/kids">Kids</Link>
         </li>
         <li>
@@ -186,9 +191,9 @@ const Navbar = () => {
         </li>
         <li>
           <Link to="/host/women_watches">Women Watches</Link>
-        </li>
+        </li> */}
       </ul>
-
+    
       {name && (
         <h3 className="bg-zink-400 font-orange-500">
           Welcom {name} {lastName}. You are our {category} Member

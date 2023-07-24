@@ -163,7 +163,8 @@ color: black;
     background-color:var(--caloryCard) ;
     border-radius: 5px;
     padding: 1rem;
-    width: fit-content;
+    /* border: 2px solid red; */
+    width: 10rem;
     position: absolute;
     top: 32rem;
     right: 28rem;

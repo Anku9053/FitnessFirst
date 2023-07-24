@@ -45,6 +45,7 @@ const Login = () => {
               if (res.data.password == data.password) {
                 toast.success("you are successfully logged in");
                 dispatch(login()).then(() => {
+                  // console.log(location)
                   navigate(location.state);
                 });
               } else {
