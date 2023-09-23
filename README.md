@@ -1,7 +1,7 @@
 
 # Fitness First
 
-its basically gym web application where user can show the different types or categories of exercise also they can join the membership als then can measure the (BMI) Body Mass Index and see the details about the different types of exercises.  
+its basically gym web application where user can show the different types or categories of exercise also they can join the membership also they can measure the (BMI) Body Mass Index and see the details about the different types of exercises.    
 
 ## Installation
 
