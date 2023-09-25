@@ -25,7 +25,8 @@ its basically gym web application where user can show the different types or cat
 
 HTML | CSS | JavaScript | React | Redux | JSON sever
 
-#deployment
+## Deployment
+
 https://fabulous-bienenstitch-3b4138.netlify.app/
 
 ## Screenshots
